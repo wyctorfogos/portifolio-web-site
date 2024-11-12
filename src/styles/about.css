@@ -4,6 +4,14 @@ body {
     color: white; 
     display: flex;
 }
+
+.github_photo{
+    justify-content: center;
+    align-self: left;
+    padding: 5%;
+    width: 25%;
+    height: fit-content;
+}
 .sidebar {
     height: 100%;
     width: 160px;
