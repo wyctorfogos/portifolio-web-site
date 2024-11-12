@@ -1,22 +1,27 @@
-body{
+body {
     background-color: black;
+    color: white; 
 }
 
-.descrition{
-    justify-content: end;
+.description {
     text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
-.user_description{
-    justify-content: center;
+.user_description {
     text-align: justify;
+    margin-top: 10px;
 }
 
-.photo{
-    justify-content: right;
-    border: 1%;
-    padding: 2%;
-    border-radius: 2%;
+.photo {
+    align-self: center;
+    border: 1px solid white; /* Adds a white border around the image */
+    padding: 5%;
+    border-radius: 4%;
+    max-width: 500%; /* Adjusts image size */
 }
 
 .sidebar {
@@ -29,4 +34,16 @@ body{
     background-color: #111;
     overflow-x: hidden;
     padding-top: 16px;
-  }
+}
+
+.sidebar a {
+    color: white;
+    padding: 8px 8px 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+    color: white;
+}
