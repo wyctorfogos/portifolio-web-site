@@ -1,0 +1,121 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #ffd700;
+    margin-top: 10px;
+}
+
+p {
+    font-size: 0.9em;
+    color: #cccccc;
+    margin: 5px 0;
+}
+
+
+.sidebar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 16px;
+}
+
+.sidebar a {
+    color: white;
+    padding: 8px 8px 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+    color: white;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+  
+
+/* Conteúdo principal */
+.about_content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+/* Cards de experiência */
+.card_experience {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.card_experience:hover {
+    transform: scale(1.02);
+}
+
+.card_experience li {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ffffff;
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.card_experience h3 {
+    font-size: 1.1em;
+    color: #ffd700;
+    margin-bottom: 8px;
+}
+
+.card_experience p {
+    font-size: 0.9em;
+    color: #cccccc;
+}
+
+/* Ajuste de responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .about_content {
+        margin-left: 0;
+    }
+
+    .sidebar a {
+        float: left;
+        padding: 15px;
+        text-align: center;
+    }
+}
