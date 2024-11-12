@@ -11,17 +11,18 @@ body {
     padding: 20px;
 }
 
-.user_description {
+#user_description {
     text-align: justify;
-    margin-top: 10px;
+    margin-top: 1px;
+    font-size: x-large;
 }
 
 .photo {
     align-self: center;
-    border: 1px solid white; /* Adds a white border around the image */
-    padding: 5%;
+    border: 1px solid white; 
+    padding: 4%;
     border-radius: 4%;
-    max-width: 500%; /* Adjusts image size */
+    max-width: 10%;
 }
 
 .sidebar {
@@ -47,3 +48,8 @@ body {
     background-color: #575757;
     color: white;
 }
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+  
