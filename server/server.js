@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 
 const app = express();
-const PORT = 3002;
+const PORT = process.env.SERVER_PORT;
 
 // Define a pasta 'public' como raiz para os arquivos estáticos
 app.use(express.static(path.join(__dirname, "../public")));

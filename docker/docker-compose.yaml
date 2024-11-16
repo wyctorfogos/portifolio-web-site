@@ -1,0 +1,26 @@
+services:
+  web-site-service:
+    container_name: website-container
+    build:
+      context: .
+      dockerfile: dockerfile  
+    env_file:
+      - ./.env
+    volumes:
+      - ../:/app/
+      - ../public:/app/public/
+      - ../server:/app/server/
+      - ../server/node_modules:/app/server/node_modules/:rw
+    command: bash -c "cd /app/server && npm start"
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+    # restart: always
+    stdin_open: true
+    tty: true
+    mem_limit: 500mb
+    networks:
+      - website
+
+networks:
+  website:
+    driver: bridge

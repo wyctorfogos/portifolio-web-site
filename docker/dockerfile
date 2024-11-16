@@ -1,0 +1,19 @@
+# Usar a imagem base oficial do Node.js
+FROM node:latest
+
+ENV TZ=America/Sao_Paulo
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# Define o diretório de trabalho
+WORKDIR /app
+
+# Copiar o restante dos arquivos
+COPY ../ ./
+
+# Expõe a porta do servidor
+EXPOSE 4000
+
+# Instalar as dependências do Node.js
+CMD bash -c "cd /app/server/ && npm install"
+
+
