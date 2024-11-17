@@ -1,22 +1,39 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/styles/styles.css">
+    <title>Wyctor Fogos da Rocha</title>
 </head>
 <body>
-    <div class="description">
-        <img class="photo" src="../../data/images/foto_perfil_linkedin.jpeg" alt="Wyctor Fogos da Rocha">
-        <h1>
-            Wyctor Fogos da Rocha
-        </h1>
-        <p id="user_description">A person with experience in Data Analysis, Data Science, Back-End Development, Tech Consulting, Electrical Engineering and FreeLancer.</p>    </div>
+    <!-- Navegação com Toggle -->
+    <nav class="navbar">
+        <button type="button" class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    </nav>
 
-        <div class="sidebar">
-            <a href="/src/views/index.html">Home</a><br>
-            <a href="/src/views/about.html">About</a><br>
-            <a href="/src/views/professional_expirience.html"> Professional Expirience</a></br>
-            <a href="/src/views/projects.html">Projects</a><br>
-            <a href="/src/views/contact.html">Contact</a><br>
-        </div>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="/src/views/index.html">Home</a>
+        <a href="/src/views/about.html">About</a>
+        <a href="/src/views/professional_expirience.html">Professional Experience</a>
+        <a href="/src/views/projects.html">Projects</a>
+        <a href="/src/views/contact.html">Contact</a>
     </div>
 
+    <div class="description">
+        <img class="photo" src="../../data/images/foto_perfil_linkedin.jpeg" alt="Wyctor Fogos da Rocha">
+        <h1>Wyctor Fogos da Rocha</h1>
+        <p id="user_description">
+            A person with experience in Data Analysis, Data Science, Back-End Development, Tech Consulting, Electrical Engineering, and Freelancer.
+        </p>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open'); 
+        }
+    </script>
 </body>
+</html>

@@ -1,55 +1,85 @@
+/* Estilos gerais */
 body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
     background-color: black;
-    color: white; 
 }
 
-.description {
-    text-align: justify;
+/* Navbar */
+.navbar {
+    background-color: #333;
+    color: rgb(41, 40, 40);
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 20px;
-}
-
-#user_description {
-    text-align: justify;
-    margin-top: 1px;
-    font-size: x-large;
-}
-
-.photo {
-    align-self: center;
-    border: 1px solid white; 
-    padding: 4%;
-    border-radius: 4%;
-    max-width: 10%;
-}
-
-.sidebar {
-    height: 100%;
-    width: 160px;
+    padding: 10px;
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 16px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.toggle-btn {
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    color: #ddd;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Inicialmente fora da tela */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding-top: 60px; /* Ajusta para não cobrir a navbar */
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.sidebar.open {
+    left: 0; /* Sidebar visível */
 }
 
 .sidebar a {
-    color: white;
-    padding: 8px 8px 8px 16px;
-    text-decoration: none;
     display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
 }
 
 .sidebar a:hover {
     background-color: #575757;
-    color: white;
 }
 
-.sidebar a:hover {
-    color: #f1f1f1;
+/* Descrição */
+.description {
+    margin-top: 100px; /* Ajuste para a altura da navbar */
+    padding: 20px;
+    text-align: center;
+    font-size: large;
+    text-align: center;
 }
-  
+
+.user_description{
+    text-align: center;
+    font-size: x-large;
+    text-align: justify;
+}
+
+.photo {
+    border-radius: 50%;
+    padding: 5%;
+    width: 10%;
+}

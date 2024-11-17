@@ -1,71 +1,100 @@
+/* Estilos gerais */
 body {
-    margin: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
     background-color: black;
-    color: white; 
-    display: flex;
 }
 
-.github_photo{
-    justify-content: center;
-    align-self: left;
-    padding: 5%;
-    width: 25%;
-    height: fit-content;
-}
-.sidebar {
-    height: 100%;
-    width: 160px;
+/* Navbar */
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 16px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.toggle-btn {
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    color: #ddd;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Escondido inicialmente */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.sidebar.open {
+    left: 0; /* Visível */
 }
 
 .sidebar a {
-    color: white;
-    padding: 8px 8px 8px 16px;
-    text-decoration: none;
     display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
 }
 
 .sidebar a:hover {
     background-color: #575757;
-    color: white;
 }
-
-.sidebar a:hover {
-    color: #f1f1f1;
-}
-  
 
 /* Conteúdo principal */
 .about_content {
-    margin-left: 180px; 
+    margin: 80px 20px; /* Ajusta para navbar fixa */
     padding: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.github_photo {
+    border-radius: 25%;
+    width: 500px;
+    height: 500px;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #ffffff;
+    font-size: large;    
+}
+
+.about_content ul {
+    text-align: justify;
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 4%;
+    list-style-type: style upper-alpha;
+}
+
+.about_content li {
     font-size: large;
-    text-align: left;
 }
 
-/* Ajustes de cabeçalhos e listas */
-h1 {
-    color: #f1f1f1;
-    margin-bottom: 10px;
-}
-
-h2 {
-    color: #f1f1f1;
-    margin-bottom: 10px;
-    justify-content: center;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 8px;
+.about_content h2 {
+    color: #dbd6d6;
+    margin-bottom: 20px;
+    font: x-large;
 }

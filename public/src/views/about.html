@@ -7,28 +7,40 @@
     <link rel="stylesheet" href="/src/styles/about.css">
 </head>
 <body>
-    <div class="sidebar">
-        <a href="/src/views/index.html">Home</a><br>
-        <a href="/src/views/about.html">About</a><br>
-        <a href="/src/views/professional_expirience.html"> Professional Expirience</a></br>
-        <a href="/src/views/projects.html">Projects</a><br>
-        <a href="/src/views/contact.html">Contact</a><br>
+    <!-- Navegação com Toggle -->
+    <nav class="navbar">
+        <button type="button" class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="/src/views/index.html">Home</a>
+        <a href="/src/views/about.html">About</a>
+        <a href="/src/views/professional_expirience.html">Professional Experience</a>
+        <a href="/src/views/projects.html">Projects</a>
+        <a href="/src/views/contact.html">Contact</a>
     </div>
     
     <div class="about_content">
-        <h1>Hi! 👋</h1>
         <img class="github_photo" src="../../data/images/github_picture.jpeg" alt="Wyctor Fogos da Rocha">
         <h2>My name is Wyctor Fogos da Rocha, a Backend Developer passionate about Technology and Innovation</h2>
 
-        <section>
+        <section name="about_content_text">
             <h2>🌟 About Me</h2>
             <ul>
-                <li>🚀 Passionate about solving complex problems through technology</li>
-                <li>🎓 Especialization in data science - Master 2, Traitement de l'information et Exploration des Données - Télécom SudParis - France </li>
-                <li>🎓 Degree in Electrical Engineering with a focus on Data Science</li>
+                <li>🚀 Passionate about solving complex problems through technology</li></br>
+                <li>🎓 Especialization in data science - Master 2, Traitement de l'information et Exploration des Données - Télécom SudParis - France </li></br>
+                <li>🎓 Degree in Electrical Engineering with a focus on Data Science</li></br>
                 <li>🧠 Developed skills in Machine Learning, Computer Vision, and Deep Learning</li>
             </ul>
         </section>
     </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open'); 
+        }
+    </script>
 </body>
 </html>
